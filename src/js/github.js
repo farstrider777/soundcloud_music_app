@@ -2,20 +2,28 @@ import $ from 'jquery';
 
 import { token } from './token';
 
-var info;
+var info = []
 
-function getData (callback) {
-    info = $.ajax({
-        url: 'https://randomuser.me/api/',
-        dataType: 'json',
-        success: callback
-    });
+function getData (search) {
+   return $.ajax({
+      url: `https://api.soundcloud.com/tracks?client_id=${token}`,
+      dataType: 'json',
+      data: {
+        q: search
+      }
+  });
 }
 
-function test(){
-  console.log("is it in there?");
-}
+//function test(){
+//  console.log("is it in there?");
+//}
 
-getData (test);
 
-export { info };
+
+function print(data, fun, wun){
+    console.log(data)
+    console.log(fun)
+    console.log(wun)
+  }
+
+export { info, getData, print};
