@@ -1,6 +1,8 @@
 import $ from 'jquery';
 
-import { token } from './token';
+import { info } from './github'
 
 
-console.log(token);
+$("h1").after('<audio controls="controls" src=""></audio>');
+
+console.log(info);
