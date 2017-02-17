@@ -11,3 +11,23 @@
  .search {
    display: inline-block;
  }
+
+img {
+  width: 130px;
+}
+
+.search-results-container {
+   display: inline-block;
+   width: 130px;
+   height: 200px;
+   vertical-align: top;
+   margin: 10px;
+ }
+
+ .song-title {
+   font-size: 12px;
+ }
+
+ .artist-name{
+   font-size: 12px;
+ }

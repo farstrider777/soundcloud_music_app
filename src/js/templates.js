@@ -2,9 +2,11 @@ import $ from 'jquery';
 
 function buildSearchResultBox(artistPictureUrl, songTitle, artistName){
   $(".searchContainer").append(`
-    <img src="${artistPictureUrl}"><img>
-    <div class="s-title">${songTitle}</div>
-    <div class="a-name">${artistName}</div>
+    <div class="search-results-container">
+      <img src="${artistPictureUrl}"></img>
+      <div class="song-title">${songTitle}</div>
+      <div class="artist-name">${artistName}</div>
+    </div>
     `);
   }
 
