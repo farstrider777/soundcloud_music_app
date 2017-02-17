@@ -5,9 +5,17 @@ import { info, getData, print} from './soundcloud'
 
 $("h1").after('<audio controls="controls" src=""></audio>');
 
-var info2;
+$("audio").after(`
+  <div>
+    <input type="text" placeholder="Search for Artist"></input>
+    <div class="search">Search</div>
+  </div>
+  `);
 
-getData("adele").then(print)
+  $(".search").click(click2)
 
 
-console.log(info);
+function click2(){
+  console.log($("input").val());
+  getData($("input").val()).then(print);
+}
