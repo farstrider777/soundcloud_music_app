@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import { info, getData, print } from './soundcloud';
+import { getData } from './soundcloud';
 import { buildSearchResultBox } from "./templates";
 
 
@@ -14,6 +14,16 @@ $("audio").after(`
   `);
 
   $(".search").click(click2)
+
+  function print(data){
+      console.log(data);
+      for(var count = 0; count < data.length; count++){
+        console.log(data[count].artwork_url)
+        console.log(data[count].title)
+        console.log(data[count].user.username)
+        buildSearchResultBox(data[count].artwork_url, data[count].user.username, data[count].title)
+      }
+    }
 
 
 function click2(){
