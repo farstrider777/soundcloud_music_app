@@ -21,10 +21,11 @@ function getData (search) {
 
 
 
-function print(data, fun, wun){
-    console.log(data)
-    console.log(fun)
-    console.log(wun)
+function print(data){
+    console.log(data);
+    for(var count = 0; count < data.length; count++){
+      console.log(data[count].artwork_url)
+    }
   }
 
 export { info, getData, print};
