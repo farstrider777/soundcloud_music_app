@@ -18,7 +18,7 @@ $("section").after(`
     <input type="text" placeholder="Search for Artist"></input>
     <div class="search">Search</div>
   </div>
-  <div class="searchContainer"></div>
+  <div class="search-container"></div>
 `);
 
 $(".search").click(click1)
@@ -29,7 +29,7 @@ function print(data){
     buildSearchResultBox(data[count].artwork_url, data[count].user.username, data[count].title, count)
     songPick.push(data[count].stream_url);
   }
-  writePlayer(songPick[0])
+  //writePlayer(songPick[0])
   for(var count = 0; count < songPick.length; count++){
     $(`#select-${count}`).click(test)
     console.log(songPick[count])
@@ -37,35 +37,13 @@ function print(data){
 }
 
 function test(event){
-  //var silly = event.clientX -  55 185    210 340   365 495
-  //writePlayer(songPick[1]);
-
-  console.log(event.target.id)
   var split = event.target.id.split("-");
   writePlayer(songPick[split[1]])
-  //writePlayer(songPick[Math.floor((event.clientX - 55)/130)])
-  //console.log(event.clientX)
 }
-
-/*
-hhh
-var whichImage;
-
-function setUpQS(){
-    whichImage = document.querySelectorAll("img");
-    for(var count = 0; count < whichImage.length; count++){
-      $(whichImage[count]).click(test(count));
-      console.log(whichImage[count]);
-    }
-}
-
-function test(whichSong){
-  writePlayer(songPick[whichSong])
-}
-
-*/
 
 function click1(){
+  $(".search-container").empty();
+  songPick = [];
   console.log($("input").val());
   getData($("input").val()).then(print);
 }
