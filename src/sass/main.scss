@@ -4,14 +4,27 @@
     -webkit-box-sizing: border-box;
  }
 
+ body {
+
+
+   //background-repeat: no-repeat;
+ }
+
 h1 {
-  letter-spacing: 50px;
+  margin-top: 0px;
+  margin-bottom: 30px;
+  font-size: 60px;
+  letter-spacing: 30px;
+  font-family: 'Dancing Script', cursive;
   transition-delay: 0s;
   transition-property: letter-spacing;
   transition-duration: 1s;
+  height: 100px;
+  width: 1000px;
 }
 
 h1:hover {
+  font-size: 60px;
   letter-spacing: 1px;
   transition-delay: 0s;
   transition-property: letter-spacing;
@@ -19,22 +32,42 @@ h1:hover {
 }
 
  .container {
+   //border: 1px solid gray;
    text-align: center;
+   margin-left: 50px;
+   border-top-left-radius: 5px;
+   border-top-right-radius: 5px;
+   width: 1000px;
+   background-color: turquoise;
+   margin-top: 20px;
  }
+
+ .container img{
+   width: 75px;
+   border-radius: 5px;
+   margin-top: 40px;
+ }
+
+input {
+  height: 36px;
+  border: 1px solid gray;
+}
 
  .search {
    display: inline-block;
-   transition-delay: 0s;
-   transition-property: font-size;
-   transition-duration: .5s;
+   border: 1px solid gray;
+   background-color: maroon;
+   padding: 8px;
+   border-radius: 10px;
+   margin-bottom: 5px;
+   color: white;
  }
 
- .search:hover {
-   font-size: 20px;
-   display: inline-block;
-   transition-delay: 0s;
-   transition-property: font-size;
-   transition-duration: .5s;
+
+ .search-container {
+   width: 1000px;
+   background-image: url("../images/background1.png");
+   background-size: 1000px 600px;
  }
 
 img {
@@ -47,6 +80,7 @@ img {
    height: 200px;
    vertical-align: top;
    margin: 10px;
+   color: #FFFFFF;
  }
 
  .song-title {
@@ -55,4 +89,18 @@ img {
 
  .artist-name{
    font-size: 12px;
+ }
+
+ footer {
+   color: white;
+   font-size: 12px;
+   background-color: turquoise;
+   height: 40px;
+   text-align: center;
+   width: 1000px;
+   margin-left: 50px;
+   border-bottom-left-radius: 5px;
+   border-bottom-right-radius: 5px;
+   margin-bottom: 50px;
+   padding-top: 15px;
  }
